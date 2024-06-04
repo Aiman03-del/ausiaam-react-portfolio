@@ -27,7 +27,7 @@ export default class Projects extends Component {
             >
               Our <span className={styles.span}>Projects</span>
             </Typography>
-            <Container sx={{ marginTop: 5, marginBottom: 5 }}>
+            <Container>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
                   <Grid container spacing={3}>
