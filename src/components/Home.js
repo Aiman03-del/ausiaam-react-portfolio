@@ -63,7 +63,7 @@ export default function Home() {
                     <XIcon />
                   </a>
                 </div>
-                <CardActions>
+                <CardActions sx={{ marginLeft: -2 }}>
                   <a href="/portfolio">
                     <button>Portfolio</button>
                   </a>
