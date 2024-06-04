@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -29,6 +28,7 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div>
       {isLargeScreen ? (
@@ -105,8 +105,8 @@ export default function Home() {
                     sx={{
                       width: { xs: 200, md: 300 },
                       height: { xs: 200, md: 300 },
-                      margin: 10,
-                      borderRadius: 50,
+                      marginTop: 12,
+                      borderRadius: "50%",
                       boxShadow: "0 0 30px rgba(1, 127, 254, 0.6)",
                     }}
                     image={profileImage}
@@ -191,8 +191,8 @@ export default function Home() {
                     sx={{
                       width: { xs: 200, md: 300 },
                       height: { xs: 200, md: 300 },
-                      margin: 10,
-                      borderRadius: 50,
+                      marginBottom: 5,
+                      borderRadius: "50%",
                       boxShadow: "0 0 30px rgba(1, 127, 254, 0.6)",
                     }}
                     image={profileImage}
