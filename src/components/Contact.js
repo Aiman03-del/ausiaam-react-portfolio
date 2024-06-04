@@ -6,6 +6,7 @@ import styles from "./styles/Contact.module.css";
 export default function Contact() {
   const form = useRef();
   const [fileSizeError, setFileSizeError] = useState("");
+  const [message, setMessage] = useState(""); // Message state to show success/failure message
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,18 +26,15 @@ export default function Contact() {
     const formData = new FormData(form.current);
     formData.append("attachment", file);
 
-    // Check the formData content
-    // for (var pair of formData.entries()) {
-    //   console.log(pair[0] + ": " + pair[1]);
-    // }
-
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
         console.log("SUCCESS!", result.text);
         setFileSizeError("");
+        setMessage("Email sent successfully!"); // Set success message
       },
       (error) => {
         console.log("FAILED...", error.text);
+        setMessage("Failed to send email. Please try again."); // Set failure message
       }
     );
   };
@@ -140,6 +138,18 @@ export default function Contact() {
                 {fileSizeError && (
                   <Typography sx={{ color: "red", marginTop: 1, fontSize: 12 }}>
                     {fileSizeError}
+                  </Typography>
+                )}
+                {message && (
+                  <Typography
+                    sx={{
+                      color: message.includes("successfully") ? "green" : "red",
+                      marginTop: 2,
+                      fontSize: 16,
+                      textShadow: " 0 0 30px #0d9421",
+                    }}
+                  >
+                    {message}
                   </Typography>
                 )}
               </div>
