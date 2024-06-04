@@ -1,0 +1,78 @@
+.profilePicContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilePicContainer img {
+  border-radius: 50%;
+}
+.profilePic {
+  transform: scale(1.3);
+  animation: intro 3s forwards;
+}
+@keyframes intro {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.about {
+  transform: translateX(-100%);
+  animation: about 3s forwards;
+}
+@keyframes about {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about button {
+  color: white;
+  height: 30px;
+  width: 80px;
+  background-color: #f5000c;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.about button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px #f5000c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about button:hover {
+  color: #f5000c;
+  background-color: #1c2c3d;
+}
+
+.about button:hover::after {
+  opacity: 1;
+}
+
+.span {
+  color: #f5000c;
+  font-weight: 900;
+  animation: glow 1s infinite alternate;
+}
+@keyframes glow {
+  100% {
+    text-shadow: 0 0 7px #f5000c;
+  }
+}
+@media (max-width: 600px) {
+  .profilePic {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+}

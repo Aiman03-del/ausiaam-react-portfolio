@@ -1,0 +1,34 @@
+.header {
+  flex-grow: 1;
+}
+
+.appBar {
+  background-color: #121212;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuButton {
+  background-color: #017ffe;
+}
+.navLinks {
+  display: flex;
+  /* gap: 1rem; */
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+}
+
+.menuButton {
+  display: none;
+}

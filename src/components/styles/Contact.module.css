@@ -1,0 +1,64 @@
+/* Contact.module.css */
+.span {
+  color: #017ffe;
+  font-weight: 900;
+  animation: glow 1s infinite alternate;
+}
+@keyframes glow {
+  100% {
+    text-shadow: 0 0 7px #017ffe;
+  }
+}
+.contact {
+  border-radius: 10px;
+}
+.contact:hover {
+  box-shadow: 0 0 30px rgba(1, 127, 254, 0.6);
+}
+.customFileUpload {
+  display: flex;
+  align-items: center;
+}
+.customFileUpload input[type="file"] {
+  display: none;
+}
+.customFileUpload span {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.customFileUpload span:hover {
+  color: #017ffe;
+}
+.btn {
+  color: white;
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #017ffe;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px rgba(1, 127, 254, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.btn:hover {
+  color: #017ffe;
+  background-color: #1c2c3d;
+}
+.btn:hover::after {
+  opacity: 1;
+}
