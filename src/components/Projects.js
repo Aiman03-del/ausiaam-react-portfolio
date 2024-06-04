@@ -13,10 +13,10 @@ export default class Projects extends Component {
         <div className={styles.projects}>
           <Container
             sx={{
-              maxWidth: 1000,
-              height: "auto",
-              margin: { xs: 1, md: 10 },
-              padding: 2,
+              maxWidth: { xs: "100%", md: 1000 },
+              marginTop: { xs: 5, md: 10 },
+              margin: "auto",
+              padding: { xs: 1, md: 2 },
             }}
           >
             <Typography

@@ -1,3 +1,4 @@
+// App.js
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -39,7 +40,7 @@ const App = () => {
         <Router>
           <Header />
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />

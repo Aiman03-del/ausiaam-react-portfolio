@@ -11,11 +11,6 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import About from "./About";
-import Contact from "./Contact";
-import Home from "./Home";
-import Projects from "./Projects";
-import Services from "./Services";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -51,7 +46,7 @@ function Header() {
           </AppBar>
           <Drawer anchor="right" open={isNavOpen} onClose={toggleNav}>
             <List>
-              <ListItem button component={Link} to="/home" onClick={toggleNav}>
+              <ListItem button component={Link} to="/" onClick={toggleNav}>
                 <ListItemText primary="Home" />
               </ListItem>
               <ListItem button component={Link} to="/about" onClick={toggleNav}>
@@ -83,13 +78,6 @@ function Header() {
               </ListItem>
             </List>
           </Drawer>
-        </div>
-        <div>
-          <Home />
-          <About />
-          <Services />
-          <Projects />
-          <Contact />
         </div>
       </div>
     </>
