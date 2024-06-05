@@ -138,7 +138,7 @@ export default function About() {
                     development, I strive to bridge the gap between aesthetics
                     and functionality.
                   </Typography>
-                  <CardActions sx={{ marginLeft: 15, marginTop: 2 }}>
+                  <CardActions sx={{ marginTop: 2 }}>
                     <a href="#">
                       <button>See more</button>
                     </a>
