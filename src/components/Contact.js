@@ -19,9 +19,9 @@ export default function Contact() {
       return;
     }
 
-    const serviceID = "service_f6sp9ta";
-    const templateID = "template_o90z4br";
-    const publicKey = "XZTT3FqzY8xg6Wz90";
+    const serviceID = process.env.SERVICE_ID;
+    const templateID = process.env.TEMPLATE_ID;
+    const publicKey = process.env.PUBLIC_KEY;
 
     const formData = new FormData(form.current);
     formData.append("attachment", file);
