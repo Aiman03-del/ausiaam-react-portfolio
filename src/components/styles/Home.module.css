@@ -77,4 +77,8 @@
   .home {
     display: block;
   }
+  .intro button {
+    height: 40px;
+    width: 85px;
+  }
 }

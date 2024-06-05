@@ -44,10 +44,3 @@
 .btn:hover::after {
   opacity: 1;
 }
-
-@media (max-width: 768px) {
-  .services {
-    margin-left: 0;
-    text-align: center;
-  }
-}

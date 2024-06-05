@@ -59,9 +59,12 @@
   font-weight: 900;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .projectContainer img {
+    height: 250px;
+  }
   .firstDescription,
   .secondContainer {
-    font-size: 8px;
+    font-size: 13px;
   }
 }

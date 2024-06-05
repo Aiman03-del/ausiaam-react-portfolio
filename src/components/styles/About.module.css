@@ -70,9 +70,8 @@
   }
 }
 @media (max-width: 600px) {
-  .profilePic {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
+  .about button {
+    height: 40px;
+    width: 85px;
   }
 }

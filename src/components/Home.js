@@ -58,7 +58,7 @@ export default function Home() {
                       And I’m <span className={styles.span}>A</span>
                     </Typography>
                     <Typography gutterBottom variant="h6" component="div">
-                      A Creative ✦ Designer Based in{" "}
+                      Creative ✦ Designer Based in{" "}
                       <span className={styles.span}>Chattagram</span>
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -119,7 +119,11 @@ export default function Home() {
         </div>
       ) : (
         <div>
-          <Container>
+          <Container
+            sx={{
+              marginTop: 5,
+            }}
+          >
             <Card
               sx={{
                 maxWidth: 1000,
@@ -144,7 +148,7 @@ export default function Home() {
                       And I’m <span className={styles.span}>A</span>
                     </Typography>
                     <Typography gutterBottom variant="h6" component="div">
-                      A Creative ✦ Designer Based in{" "}
+                      Creative ✦ Designer Based in{" "}
                       <span className={styles.span}>Chattagram</span>
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -167,7 +171,7 @@ export default function Home() {
                         <XIcon />
                       </a>
                     </div>
-                    <CardActions sx={{ marginLeft: -2 }}>
+                    <CardActions sx={{ marginLeft: -1 }}>
                       <a href="/portfolio">
                         <button>Portfolio</button>
                       </a>
