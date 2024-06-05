@@ -13,13 +13,21 @@ import All from "./All";
 import styles from "./styles/Home.module.css";
 
 export default function Home() {
-  const [isLargeScreen, setIsLargeScreen] = React.useState(
-    window.innerWidth > 768
+  const [screenSize, setScreenSize] = React.useState(
+    getScreenSize(window.innerWidth)
   );
+
+  function getScreenSize(width) {
+    if (width > 1400) return "extraLarge";
+    if (width > 1200) return "veryLarge";
+    if (width > 1024) return "large";
+    if (width > 768) return "medium";
+    return "small";
+  }
 
   React.useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
+      setScreenSize(getScreenSize(window.innerWidth));
     };
 
     window.addEventListener("resize", handleResize);
@@ -31,7 +39,7 @@ export default function Home() {
 
   return (
     <div>
-      {isLargeScreen ? (
+      {screenSize !== "small" ? (
         <div>
           <Container>
             <Card
