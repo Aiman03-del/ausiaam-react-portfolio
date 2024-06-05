@@ -19,9 +19,9 @@ export default function Contact() {
       return;
     }
 
-    const serviceID = process.env.SERVICE_ID;
-    const templateID = process.env.TEMPLATE_ID;
-    const publicKey = process.env.PUBLIC_KEY;
+    const serviceID = "service_f6sp9ta";
+    const templateID = "template_o90z4br";
+    const publicKey = "XZTT3FqzY8xg6Wz90";
 
     const formData = new FormData(form.current);
     formData.append("attachment", file);
@@ -139,14 +139,13 @@ export default function Contact() {
                   <Typography sx={{ color: "red", marginTop: 1, fontSize: 12 }}>
                     {fileSizeError}
                   </Typography>
-                )}
+                )}{" "}
                 {message && (
                   <Typography
                     sx={{
                       color: message.includes("successfully") ? "green" : "red",
                       marginTop: 2,
                       fontSize: 16,
-                      textShadow: " 0 0 30px #0d9421",
                     }}
                   >
                     {message}
